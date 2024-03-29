@@ -10,7 +10,6 @@ public class User extends Human {
 
     public User(String data) throws IOException {
         super(data);
-
     }
 
 

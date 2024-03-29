@@ -31,7 +31,7 @@ public class Human {
         this.pol = S[3];
         this.data = S[4];
         this.numberTelefon = S[5];
-        try (BufferedWriter out = new BufferedWriter(new FileWriter(path, true))){
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(secondName+".txt", true))){
             out.write(this.toString()+'\n');
 
         }
