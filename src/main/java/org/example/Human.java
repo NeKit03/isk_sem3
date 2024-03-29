@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +17,7 @@ public class Human {
 
     @Override
     public String toString() {
-        return firstName + ' ' + secondName + ' ' +lastName + ' ' + pol + ' ' +data + ' ' + numberTelefon + ' ' ;
+        return firstName + ' ' + secondName + ' ' +lastName + ' ' + pol + ' ' +data + ' ' + numberTelefon  ;
 
     }
 
@@ -30,10 +31,8 @@ public class Human {
         this.pol = S[3];
         this.data = S[4];
         this.numberTelefon = S[5];
-        try(
-                BufferedWriter out = Files.newBufferedWriter(Path.of(path));
-        ){
-            out.write(super.toString());
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(path, true))){
+            out.write(this.toString()+'\n');
 
         }
     }

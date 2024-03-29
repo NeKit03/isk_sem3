@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         User human=new User("nikita1 nikita2 nikita3 29.03.2024 12345678901 f");
+        System.out.println(human.toString());
 
         }
     }

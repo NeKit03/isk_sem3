@@ -13,13 +13,5 @@ public class User extends Human {
 
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                firstName + ' ' + secondName + ' ' + lastName + '\n' +
-                ", data='" + data + '\'' +
-                ", numberTelefon='" + numberTelefon + '\'' +
-                ", pol='" + pol + '\'' +
-                '}';
-    }
+
 }
